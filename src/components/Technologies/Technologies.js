@@ -1,5 +1,11 @@
 import React from "react";
-import { DiFirebase, DiReact, DiZend } from "react-icons/di";
+import {
+  DiFirebase,
+  DiReact,
+  DiNodejs,
+  DiDatabase,
+  DiStackoverflow,
+} from "react-icons/di";
 
 import {
   Section,
@@ -32,8 +38,37 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
-            Experiece with <br />
             React.js
+            <br />
+            Vue.js
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <DiNodejs size="3rem" />
+        </picture>
+        <ListContainer>
+          <ListTitle>Back-End</ListTitle>
+          <ListParagraph>
+            Node <br />
+            Go <br />
+            Python <br />
+            C#.Net
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <DiDatabase size="3rem" />
+        </picture>
+        <ListContainer>
+          <ListTitle>Database</ListTitle>
+          <ListParagraph>
+            MongoDB <br />
+            MySQL <br />
+            Redis
+            <br />
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -42,22 +77,25 @@ const Technologies = () => (
           <DiFirebase size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Back-End</ListTitle>
+          <ListTitle>Messaging</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            Node and Databases
+            Redis Pub/Sub
+            <br />
+            Solace <br />
+            RabbitMQ <br />
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <picture>
-          <DiZend size="3rem" />
+          <DiStackoverflow size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>UI/UX</ListTitle>
+          <ListTitle>Others</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            tools like Figma
+            NLP <br />
+            Prompt Engineering <br />
+            Solidity
           </ListParagraph>
         </ListContainer>
       </ListItem>
