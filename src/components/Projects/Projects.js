@@ -25,9 +25,11 @@ const ProjectCard = (props) => (
       <div className="project_description">
         <p>{props.project.description}</p>
         <div className="project_links">
-          <SocialIcons target="_blank" href={props.project.code}>
-            <AiFillGithub size="4rem" />
-          </SocialIcons>
+          {props.project.source && (
+            <SocialIcons target="_blank" href={props.project.source}>
+              <AiFillGithub size="4rem" />
+            </SocialIcons>
+          )}
           {props.project.visit && (
             <SocialIcons target="_blank" href={props.project.visit}>
               <AiOutlineLink size="4rem" />
@@ -61,7 +63,7 @@ const Projects = () => {
       <br />
       <SectionTitle>Projects</SectionTitle>
       <div className="project_grid_container">
-        {projects.map((project) => (
+        {[...projects].reverse().map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}
       </div>
