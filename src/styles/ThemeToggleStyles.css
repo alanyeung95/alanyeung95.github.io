@@ -1,0 +1,38 @@
+.toggle_label {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  border: 6px solid;
+  border-radius: 99em;
+  position: relative;
+  /*transition: transform 0.75s ease-in-out;*/
+  transform-origin: 50% 50%;
+  cursor: pointer;
+}
+
+.toggle_label:before {
+  transition: transform 0.3s ease;
+  transition-delay: 0.1s;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 4px;
+  left: 5px;
+}
+
+input[type="checkbox"].toggle {
+  visibility: hidden;
+}
+
+input[type="checkbox"].toggle:checked + label {
+  transform: rotate(360deg);
+  background-color: #000;
+}
+input[type="checkbox"].toggle:checked + label:before {
+  transform: translateX(57px);
+  background-color: #fff;
+}

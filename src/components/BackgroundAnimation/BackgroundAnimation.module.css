@@ -1,0 +1,15 @@
+.BgAnimation__img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+    transition: filter 0.3s ease; /* Smooth transition for filter changes */
+  }
+  
+  /* Container styling to maintain aspect ratio */
+  .BgAnimation__container {
+    max-width: 602px; /* Maximum size the image should ever be */
+    width: 100%; /* Make it responsive */
+    margin: auto; /* Centering if needed */
+    position: relative; /* For absolute positioned children if needed */
+  }
+  

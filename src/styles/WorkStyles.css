@@ -1,0 +1,156 @@
+body {
+  background-image: linear-gradient(45deg, #7175da, #9790f2);
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.work-card-container {
+  will-change: transform;
+  transition: transform 450ms;
+  margin: 20px;
+}
+
+.work-card-container :hover {
+  transition: transform 125ms;
+  transform: translate(-20px, -10px);
+}
+
+.work-card {
+  background-color: #0f193f;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.work-card h6 {
+  opacity: 0.6;
+  margin: 0;
+  font-size: medium;
+  padding-left: 1rem;
+  pointer-events: none;
+}
+
+.work-card h2 {
+  letter-spacing: 1px;
+  font-size: xx-large;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  pointer-events: none;
+}
+
+.work-card-preview {
+  background-color: #2a265f;
+  color: #fff;
+  max-width: 250px;
+  min-width: 25%;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.work-card-preview a {
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.6;
+  text-decoration: none;
+  margin-top: auto;
+  margin-right: auto;
+  pointer-events: none;
+}
+
+.work-card-info {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  margin-left: 10px;
+  color: #e6e6e6;
+  pointer-events: none;
+}
+
+.progress-container {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+  width: 150px;
+  pointer-events: none;
+}
+
+.progress {
+  background-color: #ddd;
+  border-radius: 3px;
+  height: 5px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.progress::after {
+  border-radius: 3px;
+  background-color: #2a265f;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 66%;
+  pointer-events: none;
+}
+
+.progress-text {
+  font-size: 10px;
+  opacity: 0.6;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.btn {
+  background-color: #2a265f;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.work-description ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: var(--green);
+  padding-left: 1rem;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .work-card-container :hover {
+  }
+
+  .work-card {
+    flex-direction: column;
+  }
+
+
+  .work-card-preview {
+    max-width: 100%;
+  }
+
+  .work-card h2 {
+    padding-top: 2rem;
+  }
+
+}

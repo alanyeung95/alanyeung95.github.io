@@ -1,0 +1,131 @@
+
+
+.project_grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 77px;
+  margin: 20px;
+}
+
+@media (max-width: 1000px) {
+  .project_grid_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project_container {
+  /* box-shadow: 0 20px 34px 0 rgb(191 192 195 / 44%); */
+  position: relative;
+  opacity: 1;
+  transform: translateZ(0);
+  margin: 20px;
+  background-color: #2a265f;
+}
+
+.project_img {
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.project_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.project_description {
+  padding: 30px 32px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.project_description p {
+  font-size: 1.5rem;
+  letter-spacing: -0.6px;
+  line-height: 1.45;
+  color: #ddd;
+}
+
+.project_tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.project_tags p {
+  margin: 20px 20px 10px 25px;
+}
+
+.project_tag {
+  display: inline-block;
+  position: relative;
+}
+
+.project_tag:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.project_tag:hover:after {
+  transform: scaleX(1);
+  color: #0087ca !important;
+  transform-origin: bottom left;
+}
+
+.project_title {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 20px;
+  justify-content: center;
+}
+
+.project_short_description {
+  display: block;
+  font-size: 1em;
+  font-weight: lighter;
+  margin: 20px;
+}
+
+.project_links {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  line-height: 28px;
+  margin-top: 11px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .project_grid_container {
+    display: initial;
+  }
+}
+
+@media (max-width: 470px) {
+  .project_title {
+    font-size: 2rem;
+  }
+}
