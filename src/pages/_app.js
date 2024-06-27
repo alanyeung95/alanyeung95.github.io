@@ -1,11 +1,11 @@
 import ReactGA from "react-ga";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import AOS from "aos";
 
 import "../styles/WorkStyles.css";
 import "../styles/ProjectStyles.css";
 import "../styles/ThemeToggleStyles.css";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import Theme from "../styles/theme";
 
