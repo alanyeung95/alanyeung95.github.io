@@ -77,6 +77,7 @@ jobs:
         env:
           NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }} 
         run: |
+          echo "NEXT_PUBLIC_GA_TRACKING_ID is $NEXT_PUBLIC_GA_TRACKING_ID"
           ${{ steps.detect-package-manager.outputs.runner }} next build
           ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
