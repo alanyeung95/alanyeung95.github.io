@@ -2,6 +2,7 @@ import ReactGA from "react-ga";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import AOS from "aos";
+import Script from "next/script";
 
 import "../styles/WorkStyles.css";
 import "../styles/ProjectStyles.css";
@@ -14,26 +15,40 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    ReactGA.initialize(process.env.NEXT_PUBLIC_GA_TRACKING_ID);
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
-    const handleRouteChange = (url) => {
-      ReactGA.set({ page: url });
-      ReactGA.pageview(url);
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-
     AOS.init();
 
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
+    // Check if window.gtag is defined after GA script loads
+    const checkGATag = () => {
+      if (typeof window.gtag !== "function") {
+        console.error("Google Analytics not initialized");
+      }
     };
-  }, [router.events]);
+
+    window.addEventListener("load", checkGATag);
+    return () => window.removeEventListener("load", checkGATag);
+  }, []);
 
   return (
-    <Theme themeType={themeType} setThemeType={setThemeType}>
-      <Component {...pageProps} />
-    </Theme>
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
+        `,
+        }}
+      />
+      <Theme themeType={themeType} setThemeType={setThemeType}>
+        <Component {...pageProps} />
+      </Theme>
+    </>
   );
 }
