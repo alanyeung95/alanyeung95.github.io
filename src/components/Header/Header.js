@@ -2,6 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { DiCssdeck } from "react-icons/di";
+import { GoogleLogin } from "@react-oauth/google";
+
 import DarkModeToggle from "./DarkModeToggle";
 import { trackEvent } from "../../utils/analytics"; // Import the tracking function
 
@@ -17,7 +19,6 @@ import {
   LinksDiv,
   P,
 } from "./HeaderStyles";
-
 import { githubURL, linkedinURL } from "../../constants/constants";
 
 const Header = () => {
@@ -109,6 +110,17 @@ const Header = () => {
               >
                 <AiFillLinkedin size="3rem" />
               </SocialIcons>
+            </Div3>
+            <Div3>
+              <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  console.log(credentialResponse);
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+                useOneTap
+              />
             </Div3>
           </LinksDiv>
         </div>

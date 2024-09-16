@@ -1,6 +1,4 @@
-import ReactGA from "react-ga";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import AOS from "aos";
 import Script from "next/script";
 
@@ -12,7 +10,6 @@ import Theme from "../styles/theme";
 
 export default function App({ Component, pageProps }) {
   const [themeType, setThemeType] = useState("dark");
-  const router = useRouter();
 
   useEffect(() => {
     AOS.init();
