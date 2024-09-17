@@ -26,6 +26,9 @@ const Header = () => {
     trackEvent("social_click", "Social Links", platform);
   };
 
+  const clientId = process.env.NEXT_PUBLIC_GOOGLE_OAUTH_CLIENT_ID;
+  const authUrl = `https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/drive&response_type=code&access_type=offline&redirect_uri=http://localhost:3000&client_id=${clientId}`;
+
   return (
     <div>
       <Container>
@@ -112,14 +115,28 @@ const Header = () => {
               </SocialIcons>
             </Div3>
             <Div3>
+              {/* 
+                using access token
+                tutorial: https://medium.com/automationmaster/getting-google-oauth-access-token-using-google-apis-18b2ba11a11a
+                <a href={authUrl}>Login with Google</a>
+              */}
               <GoogleLogin
+                scope="profile email https://www.googleapis.com/auth/calendar"
                 onSuccess={(credentialResponse) => {
                   console.log(credentialResponse);
+                  console.log(credentialResponse);
+
+                  /* example
+                  {
+                    clientId: "xxxxxx.apps.googleusercontent.com",
+                    credential: "eyJhbGciOiJSUzI1Nxxxxx", // id token
+                    select_by: "btn"
+                  }
+                  */
                 }}
                 onError={() => {
                   console.log("Login Failed");
                 }}
-                useOneTap
               />
             </Div3>
           </LinksDiv>
