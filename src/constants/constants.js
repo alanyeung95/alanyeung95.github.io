@@ -5,6 +5,27 @@ export const githubURL = "https://github.com/alanyeung95";
 export const workExps = [
   {
     id: 0,
+    company: "Analyst / Programmer",
+    title: "The Hong Kong Observatory",
+    description: [
+      "Full-stack development for internal and external products.",
+      "Integrating AI models at both the system and application levels.",
+      "Maintaining and optimizing AI/ML algorithms on high-performance computing clusters for Numerical Weather Prediction (NWP) and Automated Weather Forecast System (AWFS).",
+      "Modernizing legacy systems by leveraging self-hosted LLMs for automated code translation, API integration, and documentation generation.",
+    ],
+    startDate: "Oct 2023",
+    endDate: "Present",
+  },
+  {
+    id: 1,
+    company: "Great Goat Supply Ltd",
+    title: "Consultant (Machine Learning)",
+    description: ["Confidential"],
+    startDate: "Aug 2023",
+    endDate: "Nov 2023",
+  },
+  {
+    id: 2,
     company: "Mindlayer Limited",
     title: "Senior Full Stack Developer / Lead Developer",
     description: [
@@ -18,7 +39,7 @@ export const workExps = [
     endDate: "Aug 2023",
   },
   {
-    id: 1,
+    id: 3,
     company: "South China Morning Post Publishers Limited",
     title: "Software Engineer",
     description: [
@@ -33,7 +54,7 @@ export const workExps = [
     endDate: "Feb 2022",
   },
   {
-    id: 2,
+    id: 4,
     company: "Onwards Media Group Limited",
     title: "Software Engineer",
     description: [
@@ -47,7 +68,7 @@ export const workExps = [
     endDate: "Nov 2018",
   },
   {
-    id: 3,
+    id: 5,
     company: "Government of Hong Kong, HKSAR Marine Department",
     title: "Summer Intern",
     description: [
@@ -58,7 +79,7 @@ export const workExps = [
     endDate: "Aug 2016",
   },
   {
-    id: 4,
+    id: 6,
     company: "Hong Kong Economic Times",
     title: "Part-time Computer Operator",
     description: [

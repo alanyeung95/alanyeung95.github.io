@@ -123,9 +123,8 @@ const Header = () => {
               <GoogleLogin
                 scope="profile email https://www.googleapis.com/auth/calendar"
                 onSuccess={(credentialResponse) => {
-                  console.log(credentialResponse);
-                  console.log(credentialResponse);
-
+                  //console.log(credentialResponse);
+                  //console.log(credentialResponse);
                   /* example
                   {
                     clientId: "xxxxxx.apps.googleusercontent.com",
