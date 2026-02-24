@@ -10,12 +10,12 @@
     "export": "next export"
   },
   "dependencies": {
-    "@reach/menu-button": "^0.16.2",
+    "@babel/runtime": "^7.28.6",
     "aos": "^2.3.4",
     "framer-motion": "^5.5.5",
-    "next": "^12.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "next": "^14.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-ga": "^3.3.1",
     "react-icons": "^4.2.0",
     "remark-breaks": "^3.0.3",

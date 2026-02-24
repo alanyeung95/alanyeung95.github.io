@@ -37,7 +37,7 @@ const Header = () => {
           }}
         >
           <Div1>
-            <Link href="#">
+            <Link href="#" legacyBehavior>
               <a style={{ display: "flex", alignItems: "center" }}>
                 <ThemeDiv>
                   <DiCssdeck size="5rem" />
@@ -50,7 +50,7 @@ const Header = () => {
             <Div2>
               {/* Track clicks on navigation links */}
               <HeaderItem>
-                <Link href="#work">
+                <Link href="#work" legacyBehavior>
                   <NavLink
                     onClick={() => trackEvent("navigate", "Nav Links", "Work")}
                   >
@@ -59,7 +59,7 @@ const Header = () => {
                 </Link>
               </HeaderItem>
               <HeaderItem>
-                <Link href="#projects">
+                <Link href="#projects" legacyBehavior>
                   <NavLink
                     onClick={() =>
                       trackEvent("navigate", "Nav Links", "Projects")
@@ -70,7 +70,7 @@ const Header = () => {
                 </Link>
               </HeaderItem>
               <HeaderItem>
-                <Link href="#tech">
+                <Link href="#tech" legacyBehavior>
                   <NavLink
                     onClick={() =>
                       trackEvent("navigate", "Nav Links", "Technologies")
@@ -81,7 +81,7 @@ const Header = () => {
                 </Link>
               </HeaderItem>
               <HeaderItem>
-                <Link href="#about">
+                <Link href="#about" legacyBehavior>
                   <NavLink
                     onClick={() => trackEvent("navigate", "Nav Links", "About")}
                   >
