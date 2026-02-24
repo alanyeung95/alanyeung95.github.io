@@ -36,7 +36,7 @@ const Timeline = () => {
 
     if (carouselRef.current) {
       const scrollLeft = Math.floor(
-        carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
+        carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length),
       );
 
       scroll(carouselRef.current, scrollLeft);
@@ -48,7 +48,7 @@ const Timeline = () => {
       const index = Math.round(
         (carouselRef.current.scrollLeft /
           (carouselRef.current.scrollWidth * 0.7)) *
-          TimeLineData.length
+          TimeLineData.length,
       );
 
       setActiveItem(index);
@@ -79,10 +79,10 @@ const Timeline = () => {
         hold a Bachelor of Sciences (Hons) in Computer Science from The Hong
         Kong Polytechnic University.
         <br /> <br />
-        ☕️ Passionate about Full-Stack development, blockchain technologies,
-        and microservices architecture. I have led several projects to
-        completion, specializing in areas such as backend server development and
-        system integration.
+        ☕️ Passionate about Full-Stack development, blockchain technologies, and
+        microservices architecture. I have led several projects to completion,
+        specializing in areas such as backend server development and system
+        integration.
         <br /> <br />
         💻 Skilled in Java, Python, and JavaScript, with experience in
         frameworks and libraries such as React, Pytorch, and DApp ecosystem. I
@@ -95,9 +95,8 @@ const Timeline = () => {
         always engaging with new technologies and industry advancements.
         <br /> <br />
         My interests include: <br />- Artificial Intelligence/NLP applications
-        <br /> - Chatbot Technologies <br />- System Integration
+        <br /> - Chatbot Technologies
         <br />- Blockchain Technologies and Cryptocurrency
-        <br /> - Programmatic Trading
       </SectionText>
 
       <SectionTitle fontSize="40px">Major Milestones</SectionTitle>

@@ -6,6 +6,7 @@ import {
   DiDatabase,
   DiStackoverflow,
 } from "react-icons/di";
+import { SiOpenai } from "react-icons/si";
 
 import {
   Section,
@@ -36,7 +37,7 @@ const Technologies = () => (
           <DiReact size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Front-End</ListTitle>
+          <ListTitle>Frontend</ListTitle>
           <ListParagraph>
             React.js
             <br />
@@ -49,7 +50,7 @@ const Technologies = () => (
           <DiNodejs size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Back-End</ListTitle>
+          <ListTitle>Backend</ListTitle>
           <ListParagraph>
             Node <br />
             Go <br />
@@ -63,7 +64,7 @@ const Technologies = () => (
           <DiDatabase size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Database</ListTitle>
+          <ListTitle>Database/Caching</ListTitle>
           <ListParagraph>
             MongoDB <br />
             MySQL <br />
@@ -83,6 +84,21 @@ const Technologies = () => (
             <br />
             Solace <br />
             RabbitMQ <br />
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiOpenai size="2rem" />
+        </picture>
+        <ListContainer>
+          <ListTitle>AI/LLM</ListTitle>
+          <ListParagraph>
+            OpenAI API <br />
+            LLM Hosting (Ollama) <br />
+            Prompt Engineering
+            <br />
+            PyTorch · TensorFlow
           </ListParagraph>
         </ListContainer>
       </ListItem>

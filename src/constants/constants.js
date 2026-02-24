@@ -9,9 +9,11 @@ export const workExps = [
     title: "The Hong Kong Observatory",
     description: [
       "Full-stack development for internal and external products.",
+      "Data structure design and database optimization",
       "Integrating AI models at both the system and application levels.",
       "Maintaining and optimizing AI/ML algorithms on high-performance computing clusters for Numerical Weather Prediction (NWP) and Automated Weather Forecast System (AWFS).",
       "Modernizing legacy systems by leveraging self-hosted LLMs for automated code translation, API integration, and documentation generation.",
+      "Guided interns in designing and implementing AI‑driven solutions for weather forecasting and data analysis.",
     ],
     startDate: "Oct 2023",
     endDate: "Present",

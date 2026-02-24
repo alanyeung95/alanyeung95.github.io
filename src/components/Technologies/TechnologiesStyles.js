@@ -57,10 +57,11 @@ export const List = styled.ul`
 export const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 16px;
+  flex: 1;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: flex;
-    margin-left: 18px;
+    margin-left: 12px;
   }
 `;
 
@@ -103,7 +104,9 @@ export const ListParagraph = styled.p`
 export const ListItem = styled.li`
   max-width: 320px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 203px;
@@ -112,7 +115,12 @@ export const ListItem = styled.li`
   @media ${(props) => props.theme.breakpoints.sm} {
     margin-bottom: 14px;
     max-width: 320px;
-    flex-direction: row;
+    gap: 10px;
+  }
+
+  & > picture {
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -120,7 +128,7 @@ export const ListIcon = styled.img`
   display: block;
   width: 48px;
   height: 48px;
-  margin-bottom: 10px;
+  margin-right: 12px;
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 40px;
@@ -131,6 +139,6 @@ export const ListIcon = styled.img`
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 32px;
     height: 32px;
-    margin-bottom: 0px;
+    margin-right: 8px;
   }
 `;
